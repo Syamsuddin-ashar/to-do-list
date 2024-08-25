@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mengatur agar halaman sesuai dengan lebar perangkat dan skala awal 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menghubungkan file CSS eksternal untuk mengatur tampilan halaman -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Judul halaman yang ditampilkan di tab browser -->
+    <title>Todo List</title>
+</head>
+<body>
+    <!-- Container utama untuk semua konten pada halaman -->
+    <div class="container">
+        <!-- Judul halaman -->
+        <h1>Todo List</h1>
+        <!-- Area input untuk menambahkan tugas baru -->
+        <div class="task-input">
+            <!-- Input teks untuk menulis tugas baru -->
+            <input type="text" id="task-input" placeholder="add a new task...">
+            <!-- Tombol untuk menambahkan tugas baru, memanggil fungsi JavaScript 'addTask' -->
+            <button onclick="addTask()">Add</button>
+        </div>
+        <!-- Area untuk filter tugas (semua, aktif, selesai) dan tombol mode gelap -->
+        <div class="filter-container">
+            <!-- Tombol untuk menampilkan semua tugas, memanggil fungsi 'filterTasks' dengan parameter 'all' -->
+            <button onclick="filterTasks('all')" class="active">All</button>
+            <!-- Tombol untuk menampilkan hanya tugas yang aktif, memanggil fungsi 'filterTasks' dengan parameter 'active' -->
+            <button onclick="filterTasks('active')">Active</button>
+            <!-- Tombol untuk menampilkan hanya tugas yang sudah selesai, memanggil fungsi 'filterTasks' dengan parameter 'completed' -->
+            <button onclick="filterTasks('completed')">Completed</button>
+            <!-- Tombol untuk mengaktifkan atau menonaktifkan mode gelap, memanggil fungsi 'toggleDarkMode' -->
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
+        <!-- Daftar untuk menampilkan tugas-tugas yang telah ditambahkan -->
+        <ul id="task-list" class="tasks"></ul>
+    </div>
+    <!-- Menghubungkan file JavaScript eksternal untuk logika aplikasi -->
+    <script src="script.js"></script>
+</body>
+</html>

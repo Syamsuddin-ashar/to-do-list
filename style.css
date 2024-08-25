@@ -1,0 +1,143 @@
+/* Mengatur gaya dasar untuk elemen body */
+body {
+    font-family: arial, sans-serif; /* Mengatur font utama */
+    background-color: #f4f4f4; /* Warna latar belakang */
+    margin: 0; /* Menghapus margin default */
+    padding: 20px; /* Menambahkan padding di sekitar konten */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    min-height: 100vh; /* Mengatur tinggi minimum agar body memenuhi layar */
+}
+
+/* Gaya untuk container utama */
+.container {
+    background-color: #fff; /* Warna latar belakang putih untuk container */
+    border-radius: 5px; /* Membuat sudut yang melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus di sekitar container */
+    padding: 20px; /* Menambahkan padding di dalam container */
+    width: 100%; /* Lebar container 100% dari elemen induknya */
+    max-width: 500px; /* Lebar maksimum container */
+}
+
+/* Gaya untuk judul (h1) di dalam container */
+.container h1 {
+    text-align: center; /* Mengatur teks judul di tengah */
+    margin-bottom: 20px; /* Menambahkan jarak di bawah judul */
+}
+
+/* Gaya untuk area input tugas */
+.task-input {
+    display: flex; /* Mengatur elemen dalam input tugas secara fleksibel */
+    justify-content: space-between; /* Membuat jarak antara input dan tombol */
+    margin-bottom: 20px; /* Menambahkan jarak di bawah area input */
+}
+
+/* Gaya untuk input teks dalam task-input */
+.task-input input[type="text"] {
+    width: 100%; /* Mengatur lebar input agar mengisi seluruh container */
+    padding: 10px; /* Menambahkan padding di dalam input */
+    border: 1px solid #ccc; /* Menambahkan border dengan warna abu-abu */
+    border-radius: 5px; /* Membuat sudut yang melengkung pada input */
+}
+
+/* Gaya untuk tombol dalam task-input */
+.task-input button {
+    padding: 10px 20px; /* Mengatur padding di dalam tombol */
+    border: none; /* Menghapus border default tombol */
+    background-color: #28a745; /* Warna latar belakang hijau untuk tombol */
+    color: white; /* Warna teks putih */
+    border-radius: 5px; /* Membuat sudut yang melengkung pada tombol */
+    margin-left: 10px; /* Menambahkan jarak di sebelah kiri tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat tombol di-hover */
+}
+
+/* Gaya untuk tombol saat di-hover */
+.task-input button:hover {
+    background-color: #218838; /* Mengubah warna latar belakang saat di-hover */
+}
+
+/* Gaya untuk daftar tugas (tasks) */
+.tasks {
+    list-style: none; /* Menghapus bullet atau angka pada daftar */
+    padding: 0; /* Menghapus padding default */
+}
+
+/* Gaya untuk setiap item dalam daftar tugas */
+.tasks li {
+    background-color: #f8f9fa; /* Warna latar belakang untuk setiap item */
+    padding: 10px; /* Menambahkan padding di dalam item */
+    border-bottom: 1px solid #ccc; /* Menambahkan border bawah */
+    display: flex; /* Mengatur elemen dalam item secara fleksibel */
+    justify-content: space-between; /* Membuat jarak antara teks dan tombol dalam item */
+    align-items: center; /* Mengatur elemen dalam item agar sejajar secara vertikal */
+    border-radius: 5px; /* Membuat sudut yang melengkung pada item */
+    margin-bottom: 10px; /* Menambahkan jarak di bawah setiap item */
+}
+
+/* Gaya untuk item yang sudah selesai */
+.tasks li.completed {
+    text-decoration: line-through; /* Menambahkan garis tengah pada teks */
+    color: gray; /* Mengubah warna teks menjadi abu-abu */
+}
+
+/* Gaya untuk tombol dalam setiap item tugas */
+.tasks li button {
+    background-color: transparent; /* Menghapus warna latar belakang default */
+    border: none; /* Menghapus border default */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat di-hover */
+}
+
+/* Gaya untuk tombol edit */
+.tasks li button.edit {
+    color: #007bff; /* Warna biru untuk tombol edit */
+    margin-right: 10px; /* Menambahkan jarak di sebelah kanan tombol */
+}
+
+/* Gaya untuk tombol delete */
+.tasks li button.delete {
+    color: #dc3545; /* Warna merah untuk tombol delete */
+}
+
+/* Gaya untuk container filter */
+.filter-container {
+    display: flex; /* Mengatur elemen dalam filter secara fleksibel */
+    justify-content: space-between; /* Membuat jarak antara tombol filter */
+    margin-bottom: 20px; /* Menambahkan jarak di bawah area filter */
+}
+
+/* Gaya untuk tombol filter */
+.filter-container button {
+    padding: 5px 10px; /* Mengatur padding di dalam tombol */
+    border: 1px solid #ccc; /* Menambahkan border dengan warna abu-abu */
+    background-color: #f8f9fa; /* Warna latar belakang untuk tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat tombol di-hover */
+}
+
+/* Gaya untuk tombol filter yang aktif */
+.filter-container button.active {
+    background-color: #28a745; /* Warna hijau untuk tombol filter yang aktif */
+    color: white; /* Warna teks putih untuk tombol filter yang aktif */
+}
+
+/* Gaya untuk mode gelap (dark mode) */
+.dark-mode {
+    background-color: #343a40; /* Warna latar belakang gelap untuk body */
+    color: white; /* Warna teks putih */
+}
+
+/* Gaya untuk elemen dalam dark mode */
+.dark-mode .task-input input[type="text"],
+.dark-mode .filter-container button,
+.dark-mode .tasks li {
+    background-color: #495057; /* Warna latar belakang gelap untuk elemen */
+    color: white; /* Warna teks putih untuk elemen */
+    border-color: #6c757d; /* Warna border abu-abu gelap */
+}
+
+/* Gaya untuk tombol dalam dark mode */
+.dark-mode .task-input button,
+.dark-mode .filter-container button.active {
+    background-color: #28a745; /* Warna hijau untuk tombol aktif */
+    color: white; /* Warna teks putih */
+}
